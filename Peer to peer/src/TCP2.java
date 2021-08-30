@@ -14,7 +14,8 @@ public class TCP2 {
             //Create Serversocket from a specified port
             Socket d = new Socket("Localhost", 1543);
             //Message when is connected
-            System.out.println("Conectado");
+            System.out.println("Conectado");//status
+            //actions to take if it's connected
             Scanner scanner = new Scanner(System.in);
             DataInputStream viene = new DataInputStream(d.getInputStream());
             //Create new output data
@@ -27,7 +28,7 @@ public class TCP2 {
                 va.writeUTF(cim);
 
 
-                //If input is "exit" the secuence will finish
+                //If input is "salir" the secuence will finish
                 if (cim.equals("salir")) {
                     System.out.println("Saliendo");
                     viene.close();
