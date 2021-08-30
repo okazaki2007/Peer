@@ -13,6 +13,7 @@ public class TCP2 {
         try {
             //Create Serversocket from a specified port
             Socket d = new Socket("Localhost", 1543);
+            //Message when is connected
             System.out.println("Conectado");
             Scanner scanner = new Scanner(System.in);
             DataInputStream viene = new DataInputStream(d.getInputStream());
@@ -36,7 +37,10 @@ public class TCP2 {
                     System.exit(0);
                 }
                 String smsg = viene.readUTF();
+                //output on screen
                 System.out.println("Porcentaje de impuesto:" + smsg);
+                
+                //Final secuence case 
                 if (smsg.equals("salir")) {
                     System.out.println("Saliendo");
                     viene.close();
