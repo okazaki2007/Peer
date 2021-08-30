@@ -28,7 +28,7 @@ public class TCP1 {
                 System.out.println("Valor producto:" + cim);
                 scanner.nextLine();
 
-                //If input is "exit" the secuence will finish
+                //If input is "salir" the secuence will finish
                 if (cim.equals("salir")) {
                     //actions to do after fall in this condition
                     System.out.println("Saliendo");
@@ -45,7 +45,7 @@ public class TCP1 {
                 va.writeUTF(smsg);
 
 
-                //If input is "exit" the secuence will finish
+                //If input is "salir" the secuence will finish
                 if (smsg.equals("salir")) {
                     System.out.println("Saliendo");
                     viene.close();
