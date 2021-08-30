@@ -1,3 +1,4 @@
+//credits to:Nalini Jagtap
 //Different libraries exports
 import java.io.DataOutputStream;
 import java.io.DataInputStream;
@@ -29,6 +30,7 @@ public class TCP1 {
 
                 //If input is "exit" the secuence will finish
                 if (cim.equals("salir")) {
+                    //actions to do after fall in this condition
                     System.out.println("Saliendo");
                     viene.close();
                     va.close();
@@ -37,6 +39,7 @@ public class TCP1 {
                     ss.close();
                     System.exit(0);
                 }
+                
                 System.out.println("Porcentaje impuesto");
                 String smsg = scanner.nextLine();
                 va.writeUTF(smsg);
